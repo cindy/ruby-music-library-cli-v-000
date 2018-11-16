@@ -2,13 +2,13 @@ module Concerns
   module Findable
     #genre and artists class
     def find_by_name(name)
-      self.all.find{|s| self.name == name}
+      self.all.find{|s| s.name == name}
     end
 
-    def self.find_or_create_by_name(name)
+    def find_or_create_by_name(name)
       exist = self.find_by_name(name)
       unless exist
-        return self.new(name)
+        return self.create(name)
       end
       exist
     end
@@ -22,13 +22,12 @@ module Concerns
 
       def create(attributes)
         klass = self.new(attributes)
-        klass.save
         klass
       end
     end
     module InstanceMethods
       def initialize
-        self.class.all << self
+        self.class.save
       end
 
       def save
