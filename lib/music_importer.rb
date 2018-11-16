@@ -1,9 +1,11 @@
 class MusicImporter
-  def initialize(file_path)
+  attr_accessor :path
+  def initialize(path)
+    @path = path
   end
 
   def files
-    # returns all imported filenames
+    Dir.entries(path)
   end
 
   def import
