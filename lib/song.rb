@@ -31,8 +31,10 @@ class Song
     end
   end
 
-  def new_from_filename(filename)
-    MusicImporter(filename)
+  def self.new_from_filename(filename)
+    files = MusicImporter(filename).files
+    files.each do |song|
+      Song.new(song)
   end
 
   def create_from_filename(filename)
