@@ -1,3 +1,5 @@
+
+
 class Song
   extend Concerns::Findable
   extend Concerns::Memorable::ClassMethods
@@ -35,7 +37,7 @@ class Song
     files = MusicImporter(filename).files
     files.each do |song|
       s = song.split('-')
-      Song.new(s[1], s[0], s[2].gsub(".mp3", ""))
+      self.new(s[1], s[0], s[2].gsub(".mp3", ""))
     end
 
   end
