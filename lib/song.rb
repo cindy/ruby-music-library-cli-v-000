@@ -1,4 +1,4 @@
-require_relative 'music_importer'
+require_relative './music_importer'
 
 class Song
   extend Concerns::Findable
