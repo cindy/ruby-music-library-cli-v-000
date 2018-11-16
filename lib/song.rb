@@ -34,7 +34,7 @@ class Song
   def self.new_from_filename(filename)
     files = MusicImporter(filename).files
     files.each do |song|
-      Song.new(song)
+      Song.new(song.split('-').[1])
   end
 
   def create_from_filename(filename)
