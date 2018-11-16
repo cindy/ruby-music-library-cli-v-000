@@ -36,6 +36,7 @@ class Song
     files.each do |song|
       s = song.split('-')
       Song.new(s[1], s[0], s[2].gsub(".mp3", ""))
+    end
 
   end
 
