@@ -1,3 +1,5 @@
+require 'MusicImporter'
+
 class Song
   extend Concerns::Findable
   extend Concerns::Memorable::ClassMethods
