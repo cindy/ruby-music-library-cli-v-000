@@ -27,7 +27,7 @@ module Concerns
     end
     module InstanceMethods
       def initialize
-        self.class.save
+        self.save
       end
 
       def save
