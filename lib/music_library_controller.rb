@@ -64,7 +64,6 @@ class MusicLibraryController
     if number <= sorted_songs.size
       song = sorted_songs[number]
       puts "Playing #{song.name} by #{song.artist.name}"
-      puts "Playing"
     end
   end
 end
