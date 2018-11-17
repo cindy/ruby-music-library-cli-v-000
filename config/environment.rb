@@ -4,4 +4,4 @@ Bundler.require
 module Concerns
 end
 
-require_all 'lib'
+Dir[File.join(__dir__, 'lib', '*.rb')].each { |file| require file }
