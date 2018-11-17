@@ -61,9 +61,8 @@ class MusicLibraryController
     puts "Which song number would you like to play?"
     number = gets.to_i
     sorted_songs = Song.all.sort{|a,b| a.name <=> b.name}
-    require 'pry'; binding.pry
     if number-1 <= sorted_songs.size
-      song = sorted_songs[number]
+      song = sorted_songs[number-1]
       puts "Playing #{song.name} by #{song.artist.name}"
     end
   end
