@@ -23,6 +23,14 @@ class MusicLibraryController
         list_artists
       elsif action == 'list genres'
         list_genres
+      elsif action == 'list artist'
+        list_songs_by_artist
+      elsif action == 'list genres'
+        list_genres
+      elsif action == 'list genres'
+        list_genres
+      elsif action == 'list genres'
+        list_genres
       end
 
     end
