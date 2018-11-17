@@ -63,7 +63,8 @@ class MusicLibraryController
     sorted_songs = Song.all.sort{|a,b| a.name <=> b.name}
     if number + 1 <= sorted_songs.size
       song = sorted_songs[number+1]
-      "Playing #{song.name} by #{song.artist.name}"
+      # "Playing #{song.name} by #{song.artist.name}"
+      "Playing"
     end
   end
 end
