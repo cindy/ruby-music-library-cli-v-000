@@ -16,6 +16,12 @@ class MusicLibraryController
       puts "What would you like to do?"
 
       action = gets
+
+      if action == 'list songs'
+        list_songs
+      elsif action == ''
+      end
+
     end
   end
 
