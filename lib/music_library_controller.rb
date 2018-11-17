@@ -18,4 +18,8 @@ class MusicLibraryController
       action = gets
     end
   end
+
+  def list_songs
+    Songs.all.each_with_index do |song, index|
+      puts "#{index}. #{song.name}"
 end
