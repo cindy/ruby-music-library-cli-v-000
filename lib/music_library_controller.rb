@@ -19,7 +19,7 @@ class MusicLibraryController
 
       if action == 'list songs'
         list_songs
-      elsif action == ''
+      elsif action == 'list artists'
       end
 
     end
