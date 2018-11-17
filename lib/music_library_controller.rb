@@ -25,12 +25,10 @@ class MusicLibraryController
         list_genres
       elsif action == 'list artist'
         list_songs_by_artist
-      elsif action == 'list genres'
-        list_genres
-      elsif action == 'list genres'
-        list_genres
-      elsif action == 'list genres'
-        list_genres
+      elsif action == 'list genre'
+        list_songs_by_genre
+      elsif action == 'play song'
+        play_song
       end
 
     end
