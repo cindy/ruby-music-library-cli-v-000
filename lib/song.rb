@@ -21,7 +21,7 @@ class Song
 
   def artist=(artist)
     @artist = artist
-    unless artist.songs.include?(self) 
+    unless artist.songs.include?(self)
       artist.add_song(self)
     end
   end
@@ -38,7 +38,7 @@ class Song
     artist_name, song_name, genre_type = s[1], s[0], s[2].gsub(".mp3", "")
 
     artist = Artist.find_or_create_by_name(artist_name)
-    genre = Genre.find_or_create_by_name(genre_name)
+    genre = Genre.find_or_create_by_name(genre_type)
     new(song_name, artist, genre)
   end
 
