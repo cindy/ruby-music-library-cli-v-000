@@ -34,12 +34,8 @@ class Song
   end
 
   def self.new_from_filename(filename)
-    files = MusicImporter(filename).files
-    files.each do |song|
-      s = song.split('-')
-      self.new(s[1], s[0], s[2].gsub(".mp3", ""))
-    end
-
+    s = song.split('-')
+    self.new(s[1], s[0], s[2].gsub(".mp3", ""))
   end
 
   def create_from_filename(filename)
