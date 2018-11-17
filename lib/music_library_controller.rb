@@ -64,7 +64,6 @@ class MusicLibraryController
     if number + 1 <= sorted_songs.size
       song = sorted_songs[number+1]
       "Playing #{song.name} by #{song.artist.name}"
-      require 'pry'; binding.pry
     end
   end
 end
